@@ -1,2 +1,5 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.gz filter=lfs diff=lfs merge=lfs -text
+idempiere-eclipse-inst-jre-linux64.zip filter=lfs diff=lfs merge=lfs -text
+idempiere-eclipse-inst-jre-win64.zip filter=lfs diff=lfs merge=lfs -text
+idempiere-eclipse-inst-jre-mac64.tar.gz filter=lfs diff=lfs merge=lfs -text
