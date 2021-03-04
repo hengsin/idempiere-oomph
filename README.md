@@ -3,7 +3,7 @@ Custom oomph project setup model for iDempiere development environment.
 
 ## What the custom project setup model does
 * Install tycho configuration plugin.
-* Clone iDempiere source from git hub to <workspace location>/idempiere.
+* Clone iDempiere source (master branch) from github to <workspace location>/idempiere 
 * Run mvn verify.
 * Import projects into workspace.
 * Set and load target platform.
@@ -16,6 +16,3 @@ Custom oomph project setup model for iDempiere development environment.
 * JDK11
 * Maven 3.6+
 
-## Notes
-* Due to pending pull request review, the installer and setup model checkout from hengsin/idempiere instead of from the idempiere/idempiere repository (and uses branch IDEMPIERE-4719).
-* Until this have been accepted by idempiere/idempiere repository, DO NOT use this for actual development work. For now, this is purely for testing purpose only.
