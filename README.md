@@ -4,6 +4,7 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 ## Pre-requisite
 * JDK11
 * Maven 3.6+
+* Git (https://git-scm.com/downloads)
 
 ## What the iDempiere Project Setup Model does
 * Install Tycho Configuration plugin.
