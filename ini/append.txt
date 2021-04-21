@@ -1,0 +1,3 @@
+-Doomph.redirection.setups=http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/->setups/
+-Doomph.setup.installer.mode=advanced
+
