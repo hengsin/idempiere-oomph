@@ -23,7 +23,7 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 * It is a wizard interface and you should tick the 'iDempiere Master' option at second page.
 
 ## Steps to Create Installer
-* Update setups/org.eclipse.products.setup from https://git.eclipse.org/c/oomph/org.eclipse.oomph.git/tree/setups/org.eclipse.products.setup.
+* Update setups/org.eclipse.products.setup from https://git.eclipse.org/c/oomph/org.eclipse.oomph.git/tree/setups/org.eclipse.products.setup .
 * Download installer from https://wiki.eclipse.org/Eclipse_Installer.
 * Extract the downloaded installer archive (see notes for Mac and Windows below)
 * Copy setups folder to the extracted eclipse-installer folder.
