@@ -46,3 +46,9 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 * java -classpath ./eclipse-inst-win64 org.eclipse.oomph.extractor.lib.BINExtractor ./eclipse-inst-win64.exe ./exp/product.zip -export ./exp/marker.txt ./exp/extractor.exe ./exp/org.eclipse.oomph.extractor.lib.jar ./exp/product-descriptor
 * Extract exp/product.zip to exp/product
 * rename exp/product to exp/eclipse-installer
+
+## Variables cache
+* Local variables cache is store at ~/.eclipse/org.eclipse.oomph.setup/setups
+* To reset local variables cache, remove the following file at the folder above:
+  1. user.products.setup
+  1. user.setup
