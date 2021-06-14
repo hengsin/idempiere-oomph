@@ -8,18 +8,20 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 
 ## What the iDempiere Project Setup Model does
 * Install Tycho Configuration plugin.
-* Clone iDempiere source (master branch) from github.com/idempiere/idempiere to <workspace location>/idempiere 
+* Clone iDempiere source (master branch) from github.com/idempiere/idempiere to <workspace location>/idempiere
 * Run "mvn verify".
 * Import iDempiere projects into workspace.
-* Set and load iDempiere Target Platform (idempiere-201101).
+* Set and load iDempiere Target Platform (idempiere-210426).
+* You can override the ${github.repository}, Git clone branch and Target Platform variables to setup source from other repository (for e.g your own fork repository) or other branch from the idempiere/idempiere repository (for e.g release-8.2 branch).
+* Alternatively, change the value for the variables above at  eclipse-installer/setups/idempiere.setup file to create your own custom installer (You should change the name attribute to differentiate it from the default setup).
 
 ## What the custom Eclipse installer does
 * Install "Eclipse IDE for Enterprise Java Developers".
 * Execute the Project Setup Model actions listed above (Note that the Project Setup Model actions are auto executed after the first launch of the Eclipse IDE, be patient and wait for the popup dialog).
 
 ## Installation
-* Download the installer archive (idempiere-eclipse-inst-jre-*) for your OS (win, linux or mac). 
-* Extract the downloaded archive to a folder and run it (eclipse-inst for linux and mac, eclipse-inst.exe for window). 
+* Download the installer archive (idempiere-eclipse-inst-jre-*) for your OS (win, linux or mac).
+* Extract the downloaded archive to a folder and run it (eclipse-inst for linux and mac, eclipse-inst.exe for window).
 * It is a wizard interface and you should tick the 'iDempiere Master' option at second page.
 
 ## Steps to Create Installer
@@ -30,8 +32,13 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 * Append ini/append.txt to eclipse-installer/eclipse-inst.ini
 * Linux, Window: compress the eclipse-installer folder. Mac: compress the "Eclipse Installer.app" folder.
 
+## Steps to Update installer
+* If the changes is just idempiere.setup and/or idempiere.projects.setup, download the latest archive from release.
+* Extract the downloaded archive, replace idempiere.setup and/or idempiere.projects.setup from project source.
+* Use the updated archive to create a new release.
+
 ## Notes for Mac
-* The eclipse-installer is the "Eclipse Installer.app/Contents/Eclipse" folder.
+* The eclipse-installer is inside the "Eclipse Installer.app/Contents/Eclipse" folder.
 
 ## Notes for Windows
 * Extract eclipse-inst-win64.exe to eclipse-inst-win64 folder

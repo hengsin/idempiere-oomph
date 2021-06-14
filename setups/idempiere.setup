@@ -14,7 +14,7 @@
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/launching/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Launching.ecore http://www.eclipse.org/oomph/setup/maven/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Maven.ecore http://www.eclipse.org/oomph/setup/pde/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/PDE.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
-    name="idempiere.2021.05.13"
+    name="idempiere.2021.06.14"
     label="iDempiere Master">
   <setupTask
       xsi:type="setup:VariableTask"
@@ -23,18 +23,18 @@
       defaultValue=""/>
   <setupTask
       xsi:type="setup:VariableTask"
-      name="github.repository"
-      value="idempiere/idempiere"
-      label="Github repository"/>
-  <setupTask
-      xsi:type="setup:VariableTask"
       name="git.clone.branch"
-      value="master"
+      defaultValue="master"
       label="Git clone branch"/>
   <setupTask
       xsi:type="setup:VariableTask"
+      name="github.repository"
+      defaultValue="idempiere/idempiere"
+      label="$${github.repository}"/>
+  <setupTask
+      xsi:type="setup:VariableTask"
       name="idempiere.target.platform"
-      value="idempiere-210426"
+      defaultValue="idempiere-210426"
       label="Target Platform"/>
   <setupTask
       xsi:type="jdt:JRETask"

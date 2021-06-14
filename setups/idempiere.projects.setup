@@ -29,8 +29,8 @@
         name="github.remoteURIs"
         label="Github repository">
       <choice
-          value="git@github.com:@{remoteURI}.git"
-          label="Git (read-write)"/>
+          value="https://github.com/@{remoteURI}.git"
+          label="HTTPS (read-only, anonymous)"/>
       <choice
           value="https://${github.user.id|username}@github.com/@{remoteURI}.git"
           label="HTTPS (read-write)">
@@ -38,8 +38,8 @@
             source="http://www.eclipse.org/oomph/setup/MatchChoice"/>
       </choice>
       <choice
-          value="https://github.com/@{remoteURI}.git"
-          label="HTTPS (read-only, anonymous)"/>
+          value="git@github.com:@{remoteURI}.git"
+          label="Git (read-write)"/>
       <description>Choose from the available Github URIs</description>
   </setupTask>
   <setupTask
