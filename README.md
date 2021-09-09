@@ -25,13 +25,17 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 * It is a wizard interface and you should tick the 'iDempiere Master' option at second page.
 
 ## Steps to Create Installer
-* Update setups/org.eclipse.products.setup from https://git.eclipse.org/c/oomph/org.eclipse.oomph.git/tree/setups/org.eclipse.products.setup
+* git clone https://git.eclipse.org/r/oomph/org.eclipse.oomph.git
+* From the clone source, update setups/org.eclipse.products.setup org.eclipse.oomph/setups/org.eclipse.products.setup
   *  The <product name="epp.package.jee"label="Eclipse IDE for Enterprise Java and Web Developers"> section.
+  *  Copy the <version ..> part for the version that you are creating the installer for (for e.g 2021-06)
+* Update setups/idempiere.setup
+  *  Update name attribute of setup:Project (usually to a new timestamp)
+  *  Update defaultValue for idempiere.target.platform setupTask.
 * Download installer from https://wiki.eclipse.org/Eclipse_Installer.
-* Extract the downloaded installer archive (see notes for Mac and Windows below)
-* Copy setups folder to the extracted eclipse-installer folder.
-* Append ini/append.txt to eclipse-installer/eclipse-inst.ini
-* Linux, Window: compress the eclipse-installer folder. Mac: compress the "Eclipse Installer.app" folder.
+* Copy the downloaded installer to root folder
+* Run create-linux-installer.sh, create-mac-installer.sh and create-windows-installer.sh
+  * Installer archive for linux, mac and windows will be created at the target folder.
 
 ## Steps to Update installer
 * If the changes is just idempiere.setup and/or idempiere.projects.setup, download the latest archive from release.
@@ -42,6 +46,7 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 * The eclipse-installer is inside the "Eclipse Installer.app/Contents/Eclipse" folder.
 
 ## Notes for Windows
+* Following are steps to extract windows installer archive using org.eclipse.oomph.extractor.lib.BINExtractor, use this if unzip doesn't work to extract the actual contents
 * Extract eclipse-inst-win64.exe to eclipse-inst-win64 folder
 * mkdir exp
 * java -classpath ./eclipse-inst-win64 org.eclipse.oomph.extractor.lib.BINExtractor ./eclipse-inst-win64.exe ./exp/product.zip -export ./exp/marker.txt ./exp/extractor.exe ./exp/org.eclipse.oomph.extractor.lib.jar ./exp/product-descriptor
@@ -51,5 +56,6 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 ## Variables cache
 * Local variables cache is store at ~/.eclipse/org.eclipse.oomph.setup/setups
 * To reset local variables cache, remove the following file at the folder above:
-  1. user.products.setup
-  1. user.setup
+  * user.products.setup
+  * user.setup
+
