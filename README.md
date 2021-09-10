@@ -26,11 +26,11 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 
 ## Steps to Create Installer
 * git clone https://git.eclipse.org/r/oomph/org.eclipse.oomph.git
-* From the clone source, update setups/org.eclipse.products.setup org.eclipse.oomph/setups/org.eclipse.products.setup
+* Update setups/org.eclipse.products.setup from org.eclipse.oomph/setups/org.eclipse.products.setup inside the clone source above.
   *  The <product name="epp.package.jee"label="Eclipse IDE for Enterprise Java and Web Developers"> section.
   *  Copy the <version ..> part for the version that you are creating the installer for (for e.g 2021-06)
 * Update setups/idempiere.setup
-  *  Update name attribute of setup:Project (usually to a new timestamp)
+  *  Update name attribute of setup:Project (usually to a new date timestamp)
   *  Update defaultValue for idempiere.target.platform setupTask.
 * Download installer from https://wiki.eclipse.org/Eclipse_Installer.
 * Copy the downloaded installer to root folder
@@ -41,6 +41,16 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 * If the changes is just idempiere.setup and/or idempiere.projects.setup, download the latest archive from release.
 * Extract the downloaded archive, replace idempiere.setup and/or idempiere.projects.setup from project source.
 * Use the updated archive to create a new release.
+
+## Create your own custom installer
+* Download the installer archive from the release section
+* Extract the archive
+* Edit eclipse-installer/setups/idempiere.setup
+  * Change name attribute of setup:Project. That should be a unique name for your setup profile and is use to reference the local variable cache.
+  * Edit defaultValue for git.clone.branch setupTask. This is the branch that you want to check out source from.
+  * Edit defaultValue for github.repository setupTask. This is the path to your github repository (for e.g, mine is hengsin/idempiere)
+  * Edit defaultValue for idempiere.target.platform. This is the name of your target platform.
+* After you have completed the changes, you can use it directly or archive it for redistribution. For testing, it is recommended to copy the eclipse-installer folder to a temporary location and run it from there. Note that if you want to archive it for redistribution, you should archive the folder that you have not attempt to run the installer.
 
 ## Notes for Mac
 * The eclipse-installer is inside the "Eclipse Installer.app/Contents/Eclipse" folder.
@@ -53,9 +63,8 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
 * Extract exp/product.zip to exp/product
 * rename exp/product to exp/eclipse-installer
 
-## Variables cache
+## Local Variables Cache
 * Local variables cache is store at ~/.eclipse/org.eclipse.oomph.setup/setups
 * To reset local variables cache, remove the following file at the folder above:
-  * user.products.setup
   * user.setup
 
