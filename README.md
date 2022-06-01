@@ -38,9 +38,10 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
   * Installer archive for linux, mac and windows will be created at the target folder.
 
 ## Steps to Update installer
-* If the changes is just idempiere.setup and/or idempiere.projects.setup, download the latest archive from release.
+* If the changes is just idempiere.setup and/or idempiere.projects.setup, download the latest archive from https://github.com/hengsin/idempiere-oomph/releases.
 * Extract the downloaded archive, replace idempiere.setup and/or idempiere.projects.setup from project source.
 * Use the updated archive to create a new release.
+* For new Eclipse version, use the steps above to create a new installer.
 
 ## Create your own custom installer
 * Download the installer archive from the release section
