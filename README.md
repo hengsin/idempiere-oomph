@@ -30,7 +30,7 @@ Eclipse Oomph Project Setup Model for iDempiere Development environment.
   *  The <product name="epp.package.jee"label="Eclipse IDE for Enterprise Java and Web Developers"> section.
   *  Copy the <version ..> part for the version that you are creating the installer for (for e.g 2021-06)
 * Update setups/idempiere.setup
-  *  Update name attribute of setup:Project (usually to a new date timestamp)
+  *  Update name attribute of setup:Project to idempiere.<version>.<target platform timestamp> (for e.g idempiere.10.220525).
   *  Update defaultValue for idempiere.target.platform setupTask.
 * Download installer from https://wiki.eclipse.org/Eclipse_Installer.
 * Copy the downloaded installer to root folder
