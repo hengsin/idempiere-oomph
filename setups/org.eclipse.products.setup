@@ -15,7 +15,7 @@
     </detail>
     <detail
         key="notificationURI">
-      <value>https://www.eclipse.org/setups/donate/?scope=${scope}&amp;campaign=2021-12</value>
+      <value>https://www.eclipse.org/setups/donate/?scope=${scope}&amp;campaign=2022-03</value>
     </detail>
     <detail
         key="notificationLabel">
@@ -60,15 +60,15 @@
         <value>Donate to the Eclipse Community for the Eclipse IDE for Enterprise Java Developers</value>
       </detail>
     </annotation>    
-        <version
+    <version
         name="latest.released"
-        label="Latest Release (2021-12)"
+        label="Latest Release (2022-03)"
         requiredJavaVersion="11">
       <annotation
           source="http://www.eclipse.org/oomph/setup/BrandingInfo">
         <detail
             key="siteURI">
-          <value>https://www.eclipse.org/downloads/packages/release/2021-12/r/eclipse-ide-enterprise-java-and-web-developers</value>
+          <value>https://www.eclipse.org/downloads/packages/release/2022-03/r/eclipse-ide-enterprise-java-and-web-developers</value>
         </detail>
         <detail
             key="shortcut">
@@ -77,17 +77,17 @@
       </annotation>
       <setupTask
           xsi:type="setup.p2:P2Task"
-          label="Eclipse IDE for Enterprise Java and Web Developers (2021-12)">
+          label="Eclipse IDE for Enterprise Java and Web Developers (2022-03)">
         <requirement
             name="epp.package.jee"
-            versionRange="[4.22.0,5.0.0)"
+            versionRange="[4.23.0,5.0.0)"
             filter="(|(&amp;(osgi.arch=aarch64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=aarch64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32)))"/>
         <requirement
             name="org.eclipse.platform.feature.group"
-            versionRange="[4.22.0,5.0.0)"/>
+            versionRange="[4.23.0,5.0.0)"/>
         <requirement
             name="org.eclipse.rcp.feature.group"
-            versionRange="[4.22.0,5.0.0)"/>
+            versionRange="[4.23.0,5.0.0)"/>
         <requirement
             name="org.eclipse.buildship.feature.group"/>
         <requirement
@@ -173,6 +173,8 @@
         <requirement
             name="org.eclipse.jdt.feature.group"/>
         <requirement
+            name="org.eclipse.jgit.feature.group"/>
+        <requirement
             name="org.eclipse.jpt.common.eclipselink.feature.feature.group"/>
         <requirement
             name="org.eclipse.jpt.common.feature.feature.group"/>
@@ -255,17 +257,17 @@
         <requirement
             name="org.eclipse.wst.xsl.feature.feature.group"/>
         <repository
-            url="https://download.eclipse.org/technology/epp/packages/2021-12/202112021200"/>
+            url="https://download.eclipse.org/technology/epp/packages/2022-03/202203101200"/>
         <repository
-            url="https://download.eclipse.org/releases/2021-12/202112081000">
+            url="https://download.eclipse.org/releases/2022-03/202203161000">
           <annotation
               source="http://www.eclipse.org/oomph/setup/ReleaseTrain"/>
         </repository>
       </setupTask>
     </version>
     <version
-        name="2021-12"
-        label="2021-12"
+        name="2022-03"
+        label="2022-03"
         requiredJavaVersion="11">
       <annotation
           source="http://www.eclipse.org/oomph/setup/BrandingInfo">
@@ -275,26 +277,26 @@
         </detail>
         <detail
             key="siteURI">
-          <value>https://www.eclipse.org/downloads/packages/release/2021-12/r/eclipse-ide-enterprise-java-and-web-developers</value>
+          <value>https://www.eclipse.org/downloads/packages/release/2022-03/r/eclipse-ide-enterprise-java-and-web-developers</value>
         </detail>
         <detail
             key="shortcut">
-          <value>Eclipse IDE for Enterprise Java and Web Developers - 2021-12</value>
+          <value>Eclipse IDE for Enterprise Java and Web Developers - 2022-03</value>
         </detail>
       </annotation>
       <setupTask
           xsi:type="setup.p2:P2Task"
-          label="Eclipse IDE for Enterprise Java and Web Developers (2021-12)">
+          label="Eclipse IDE for Enterprise Java and Web Developers (2022-03)">
         <requirement
             name="epp.package.jee"
-            versionRange="[4.22.0,5.0.0)"
+            versionRange="[4.23.0,5.0.0)"
             filter="(|(&amp;(osgi.arch=aarch64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=aarch64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=linux)(osgi.ws=gtk))(&amp;(osgi.arch=x86_64)(osgi.os=macosx)(osgi.ws=cocoa))(&amp;(osgi.arch=x86_64)(osgi.os=win32)(osgi.ws=win32)))"/>
         <requirement
             name="org.eclipse.platform.feature.group"
-            versionRange="[4.22.0,5.0.0)"/>
+            versionRange="[4.23.0,5.0.0)"/>
         <requirement
             name="org.eclipse.rcp.feature.group"
-            versionRange="[4.22.0,5.0.0)"/>
+            versionRange="[4.23.0,5.0.0)"/>
         <requirement
             name="org.eclipse.buildship.feature.group"/>
         <requirement
@@ -380,6 +382,8 @@
         <requirement
             name="org.eclipse.jdt.feature.group"/>
         <requirement
+            name="org.eclipse.jgit.feature.group"/>
+        <requirement
             name="org.eclipse.jpt.common.eclipselink.feature.feature.group"/>
         <requirement
             name="org.eclipse.jpt.common.feature.feature.group"/>
@@ -462,9 +466,9 @@
         <requirement
             name="org.eclipse.wst.xsl.feature.feature.group"/>
         <repository
-            url="https://download.eclipse.org/technology/epp/packages/2021-12/202112021200"/>
+            url="https://download.eclipse.org/technology/epp/packages/2022-03/202203101200"/>
         <repository
-            url="https://download.eclipse.org/releases/2021-12/202112081000">
+            url="https://download.eclipse.org/releases/2022-03/202203161000">
           <annotation
               source="http://www.eclipse.org/oomph/setup/ReleaseTrain"/>
         </repository>
